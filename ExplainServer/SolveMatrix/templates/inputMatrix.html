@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solve Matrix</title>
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block page_content %}
+    <h1>Input Matrix</h1>
+
+    <form action="/Result/" method="post">
+    {% csrf_token %}
+        <table>
+            <tr>
+                <th>{{ matrix.x11 }}</th>
+                <th>{{ matrix.x12 }}</th>
+                <th>{{ matrix.x13 }}</th>
+            </tr>
+            <tr>
+                <th>{{ matrix.x21 }}</th>
+                <th>{{ matrix.x22 }}</th>
+                <th>{{ matrix.x23 }}</th>
+            </tr>
+            <tr>
+                <th>{{ matrix.x31 }}</th>
+                <th>{{ matrix.x32 }}</th>
+                <th>{{ matrix.x33 }}</th>
+            </tr>
+        </table>
+
+    <input type="submit" value="Submit">
+    </form>
+
+     <table style="width:100%">
+
+
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+          </tr>
+          <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+          </tr>
+    </table>
+{% endblock %}
+</body>
+</html>
